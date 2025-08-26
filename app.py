@@ -21,7 +21,7 @@ def process_and_summarize_pdf(pdf_file_path, custom_prompt_text, chain_type, chu
     Processes and generates a response from a PDF using a user-provided prompt and settings.
     """
     # 1. Instantiate LLM model
-    api_key = os.getenv("GEMINI_API_key")
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         st.error("GEMINI_API_key not found. Please set it in your API.env file.")
         return None
@@ -140,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
